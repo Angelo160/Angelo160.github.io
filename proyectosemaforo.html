@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="proyectoarduino.css">
+</head>
+<body>
+    <header>
+        <img src="https://soportetecnicosam.wordpress.com/wp-content/uploads/2022/10/sello-del-colegio-1.png?w=220" class="img1" alt="HTML">
+        <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" class="img2" alt="HTML">
+        <h1>Programación con Arduino</h1>
+    </header>
+    <header>
+        <marquee direction="left">¡BIENVENIDOS A NUESTRA PÁGINA DEDICADA A LA PROGRAMACIÓN CON ARDUINO! DESCUBRE RECURSOS, TUTORIALES Y PROYECTOS INSPIRADORES PARA LLEVAR TUS IDEAS TECNOLÓGICAS AL SIGUIENTE NIVEL.</marquee><br>
+    </header>
+    <nav>
+        <a href="inicio.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="proyectosemaforo.html">Proyecto en Arduino</a>
+        <a href="nosotros.html">Acerca de Nosotros</a>
+    </nav>
+    <section>
+        <h1>Proyecto de Semáforo con Arduino Utilizando Tinkercad</h1><br>
+        <center>
+            <img src="semaforo.jpeg" alt="html" height="350px" width="450px">
+        </center>
+        <h2>Introducción</h2>
+        <p>El proyecto de crear un semáforo con Arduino utilizando Tinkercad es una excelente manera de aprender sobre electrónica básica y programación de microcontroladores. Tinkercad es una plataforma en línea gratuita y fácil de usar que permite simular circuitos electrónicos y programar Arduino sin necesidad de hardware físico. Este proyecto es ideal para principiantes que desean comprender cómo funcionan los semáforos y cómo se pueden programar con Arduino.</p>
+        <strong>Componentes Necesarios</strong>
+        <p>Para llevar a cabo este proyecto, se requieren los siguientes componentes virtuales en Tinkercad:</p>
+        <ul>
+            <li>Placa Arduino Uno</li>
+            <li>LEDs (rojo, amarillo y verde)</li>
+            <li>Resistencias (220 ohmios)</li>
+            <li>Protoboard (placa de pruebas)</li>
+            <li>Cables de conexión</li>
+        </ul>
+        <strong>Pasos para Realizar el Semáforo:</strong>
+        <ul>
+            <li>Coloca la placa Arduino Uno en el área de trabajo.</li>
+            <li>Añade el protoboard y conecta los LEDs a la placa de pruebas: el LED rojo, el LED amarillo y el LED verde.</li>
+            <li>Conecta el cátodo (pierna más corta) de cada LED a la línea negativa de la protoboard.</li>
+            <li>Conecta el ánodo (pierna más larga) de cada LED a diferentes pines digitales de la placa Arduino (por ejemplo, pines 8, 9 y 10).</li>
+            <li>Inserta una resistencia de 220 ohmios en serie con cada LED para limitar la corriente.</li>
+            <li>Utiliza cables de conexión para enlazar los LEDs y las resistencias con los pines correspondientes en la placa Arduino.</li>
+            <li>Asegúrate de que la línea negativa de la protoboard esté conectada a un pin de tierra (GND) en la placa Arduino.</li>
+        </ul>
+        <strong>Código</strong>
+        <center>
+            <img src="codigo.jpeg" alt="html" height="350px" width="300px">
+        </center>
+
+        <ul>
+            <li>Se declaran tres variables de tipo entero para representar los pines digitales a los que están conectados los LEDs del semáforo: el LED rojo está en el pin 13, el LED amarillo en el pin 12 y el LED verde en el pin 11.</li>
+            <li>La función setup() se ejecuta una vez cuando el Arduino se enciende o se reinicia. Aquí se configuran los pines 11, 12 y 13 como salidas, utilizando la función pinMode(). Esto permite que el Arduino pueda enviar señales de voltaje a los LEDs conectados a estos pines para encenderlos o apagarlos.</li>
+            <li>La función loop() se ejecuta repetidamente en un bucle infinito mientras el Arduino está encendido. Esta función contiene la lógica para controlar la secuencia del semáforo.</li>
+        </ul>
+        <strong>Luz Roja</strong>
+        <ul>
+            <li><strong>digitalWrite(rojo, HIGH);:</strong>Enciende el LED rojo.</li>
+            <li><strong>digitalWrite(amarillo, LOW);:</strong>Asegura que el LED amarillo esté apagado.</li>
+            <li><strong>digitalWrite(verde, LOW);:</strong>Asegura que el LED verde esté apagado.</li>
+            <li><strong>delay(6000);:</strong> Mantiene el LED rojo encendido durante 6000 milisegundos (6 segundos).</li>
+        </ul>
+
+        <strong>Luz Verde</strong>
+        <ul>
+            <li><strong>digitalWrite(verde, HIGH);:</strong> Enciende el LED verde.</li>
+            <li><strong>digitalWrite(rojo, LOW);:</strong> Asegura que el LED rojo esté apagado.</li>
+            <li><strong>digitalWrite(amarillo, LOW);:</strong> Asegura que el LED amarillo esté apagado.</li>
+            <li><strong>delay(4000);:</strong> Mantiene el LED verde encendido durante 4000 milisegundos (4 segundos).</li>
+       </ul>
+
+        <strong>Luz Amarilla</strong>
+       <ul>
+            <li><strong>digitalWrite(amarillo, HIGH);:</strong> Enciende el LED amarillo.</li>
+            <li><strong>digitalWrite(verde, LOW);:</strong> Asegura que el LED verde esté apagado.</li>
+            <li><strong>digitalWrite(rojo, LOW);:</strong> Asegura que el LED rojo esté apagado.</li>
+            <li><strong>delay(2000);:</strong> Mantiene el LED amarillo encendido durante 2000 milisegundos (2 segundos).</li>
+      </ul>
+    </section>
+    <footer>
+        <p>&copy; Mi Página Web</p>
+    </footer>
+</body>
+</html>
